@@ -6,7 +6,7 @@ Flaredown makes it easy for people to track symptoms over time, and learn how to
 * PostgreSQL 9.4
 * MongoDB 3.0.10
 * Redis 3.2.6
-* Ruby 2.3.1 (see [RVM](https://rvm.io/) also)
+* Ruby 2.7.0 (see [RVM](https://rvm.io/) also)
 * Node 6.10.3
 
 
