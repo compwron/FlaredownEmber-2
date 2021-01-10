@@ -266,4 +266,25 @@ namespace :oneoff do
       user.destroy!
     end
   end
+
+  task :get_user_data_by_email, ['email'] => :environment do |t, args|
+    email = args['email'].strip
+    user = User.find_by(email: email)
+    if user
+
+      user.profile
+      {
+          conditions: user.conditions,
+          checkins: user.checkins,
+          symptoms: user.symptoms,
+          treatments: user.treatments,
+          tags: user.tags,
+          foods: user.foods,
+          trackings: user.trackings,
+          trackable_usages: user.trackable_usages
+      }
+    else
+      puts "User not found"
+    end
+  end
 end
